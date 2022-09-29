@@ -1,0 +1,12 @@
+{{ with and .Site.Params.utterances (or .Site.Params.show_comments
+.Params.show_comments)}} {{ $utterances := $.Site.Params.utterances }}
+<hr />
+<script
+  src="https://utteranc.es/client.js"
+  repo="{{$utterances.repo}}"
+  issue-term="{{$utterances.issue}}"
+  theme="{{$utterances.theme}}"
+  crossorigin="anonymous"
+  async
+></script>
+{{ end }}
