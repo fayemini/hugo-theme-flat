@@ -23,6 +23,7 @@ tabWidth = 4
 
 [params]
 mainSections = ['posts']
+ga = "abcdefg"
 
 ## uncomment belows and set proper values to enable remark42
 # [params.remark42]
