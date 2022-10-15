@@ -1,6 +1,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 
+<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}" />
+<meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ end }}" />
+
 {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
